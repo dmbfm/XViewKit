@@ -16,6 +16,10 @@ open class XCommonView: XView {
         super.layout()
         self.doLayout()
     }
+
+    public var contentScale: CGFloat {
+        self.window?.backingScaleFactor ?? 2.0
+    }
     #endif
 
     #if os(iOS)
