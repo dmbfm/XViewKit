@@ -6,7 +6,7 @@ import UIKit
 import AppKit
 #endif
 
-open class PlatformCommonView: XView {
+open class XCommonView: XView {
     #if os(macOS)
     open override var isFlipped: Bool {
         true
