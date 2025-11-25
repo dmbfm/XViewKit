@@ -1,6 +1,6 @@
 #if canImport(AppKit)
 import AppKit
-public typealias PlatformColor = NSColor
+public typealias XColor = NSColor
 
 public extension NSColor {
     static let label: NSColor = .labelColor
@@ -12,5 +12,5 @@ public extension NSColor {
 
 #if canImport(UIKit)
 import UIKit
-public typealias PlatformColor = UIColor
+public typealias XColor = UIColor
 #endif
