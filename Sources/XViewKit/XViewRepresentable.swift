@@ -26,7 +26,7 @@ extension XViewRepresentable {
         self.sizeThatFits(proposal, view: nsView, context: context)
     }
 
-    func sizeThatFits(_ proposal: ProposedViewSize, view: ViewType, context: Context) -> CGSize? {
+    public func sizeThatFits(_ proposal: ProposedViewSize, view: ViewType, context: Context) -> CGSize? {
         nil
     }
 }
