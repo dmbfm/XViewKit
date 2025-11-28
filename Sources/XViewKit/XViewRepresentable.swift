@@ -5,7 +5,7 @@ import SwiftUI
 import AppKit
 
 public protocol XViewRepresentable: NSViewRepresentable where NSViewType == ViewType {
-    associatedtype ViewType
+    associatedtype ViewType: XView
     
     func makeView(context: Context) -> ViewType
     func updateView(_ view: ViewType, context: Context)
@@ -31,7 +31,7 @@ extension XViewRepresentable {
 import UIKit
 
 public protocol XViewRepresentable: UIViewRepresentable where UIViewType == ViewType {
-    associatedtype ViewType
+    associatedtype ViewType: XView
     
     func makeView(context: Context) -> ViewType
     func updateView(_ view: ViewType, context: Context)
