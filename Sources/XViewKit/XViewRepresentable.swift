@@ -4,6 +4,7 @@ import SwiftUI
 #if canImport(AppKit)
 import AppKit
 
+@MainActor
 public protocol XViewRepresentable: NSViewRepresentable where NSViewType == ViewType {
     associatedtype ViewType: XView
     
@@ -23,6 +24,10 @@ extension XViewRepresentable {
 
     public func sizeThatFits(_ proposal: ProposedViewSize, nsView: NSViewType, context: Context) -> CGSize? {
         self.sizeThatFits(proposal, view: nsView, context: context)
+    }
+
+    func sizeThatFits(_ proposal: ProposedViewSize, view: ViewType, context: Context) -> CGSize? {
+        nil
     }
 }
 #endif
@@ -49,6 +54,10 @@ extension XViewRepresentable {
 
     public func sizeThatFits(_ proposal: ProposedViewSize, nsView: UIViewType, context: Context) -> CGSize? {
         self.sizeThatFits(proposal, view: nsView, context: context)
+    }
+
+    func sizeThatFits(_ proposal: ProposedViewSize, view: ViewType, context: Context) -> CGSize? {
+        nil
     }
 }
 
