@@ -48,15 +48,15 @@ extension XViewRepresentable {
         self.makeView(context: context)
     }
 
-    public func updateUIView(_ nsView: UIViewType, context: Context) {
+    public func updateUIView(_ uiView: UIViewType, context: Context) {
         self.updateView(nsView, context: context)
     }
 
-    public func sizeThatFits(_ proposal: ProposedViewSize, nsView: UIViewType, context: Context) -> CGSize? {
+    public func sizeThatFits(_ proposal: ProposedViewSize, uiView: UIViewType, context: Context) -> CGSize? {
         self.sizeThatFits(proposal, view: nsView, context: context)
     }
 
-    func sizeThatFits(_ proposal: ProposedViewSize, view: ViewType, context: Context) -> CGSize? {
+    public func sizeThatFits(_ proposal: ProposedViewSize, view: ViewType, context: Context) -> CGSize? {
         nil
     }
 }
