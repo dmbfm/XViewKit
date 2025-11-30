@@ -49,11 +49,11 @@ extension XViewRepresentable {
     }
 
     public func updateUIView(_ uiView: UIViewType, context: Context) {
-        self.updateView(nsView, context: context)
+        self.updateView(uiView, context: context)
     }
 
     public func sizeThatFits(_ proposal: ProposedViewSize, uiView: UIViewType, context: Context) -> CGSize? {
-        self.sizeThatFits(proposal, view: nsView, context: context)
+        self.sizeThatFits(proposal, view: uiView, context: context)
     }
 
     public func sizeThatFits(_ proposal: ProposedViewSize, view: ViewType, context: Context) -> CGSize? {
